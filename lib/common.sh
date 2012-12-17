@@ -25,7 +25,7 @@ source_install()
 {
   path=$1
   url=$2
-  config=$2
+  config=$3
   echo ">> +++ Installing $package from Source..."
   wget $url -O temp.tar.gz
   tar xzvf temp.tar.gz -C /etc/
