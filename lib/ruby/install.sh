@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # Ruby Installer
 ruby_install()
