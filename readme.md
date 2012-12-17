@@ -4,8 +4,6 @@ Sets up a LNMR (Linux Nginx MySQL Ruby) installation for a development or produc
 
 ### Installation
 
-Install new dotfiles and backup your orignal ones.
-
 ```terminal
 curl -L https://raw.github.com/nickbarth/LNMRSetup/master/install.sh | sh
 ```
