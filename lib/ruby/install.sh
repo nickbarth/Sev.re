@@ -7,7 +7,6 @@ ruby_install()
   echo ">> Installing Ruby $ruby_version..."
   dependency_install 'ruby' 'yaml' 'packages'
   source_install "ruby-$ruby_version" \
-                 "http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-$ruby_version.tar.gz" \
-                 "-march=native -O2"
+                 "http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-$ruby_version.tar.gz"
   echo ">> Ruby $ruby_version Installed."
 }
