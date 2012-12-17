@@ -23,13 +23,14 @@ package_install()
 
 source_install()
 {
-  url=$1
+  path=$1
+  url=$2
   config=$2
   echo ">> +++ Installing $package from Source..."
   wget $url -O temp.tar.gz
   tar xzvf temp.tar.gz -C /etc/
   rm -f temp.tar.gz
-  cd `ls /etc/* -t1d | head -1`
+  cd "/etc/$path"
   ./configure $config
   make
   make install
