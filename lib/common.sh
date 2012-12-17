@@ -35,3 +35,21 @@ source_install()
   make install
   echo ">> +++ Installing $package Complete..."
 }
+
+run_setup()
+{
+  servername=$1
+  hostname $servername
+  echo "Welcome to $servername" > /etc/motd
+  package_install 'screen' 'curl' 'wget'
+  yum update -y
+}
+
+run_install()
+{
+  servername=$1
+  run_setup $servername
+  ruby_install '1.9.3-p327'
+  nginx_install
+  mysql_install
+}
