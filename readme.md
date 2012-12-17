@@ -1,4 +1,18 @@
-ServerSetup
-===========
+# LNMR Setup
 
-Bash Script for a Production Ruby Server Setup
+Sets up a LNMR (Linux Nginx MySQL Ruby) installation for a development or production server. 
+
+### Installation
+
+Install new dotfiles and backup your orignal ones.
+
+```terminal
+curl -L https://raw.github.com/nickbarth/LNMRSetup/master/install.sh | sh
+```
+
+### Notes
+
+This application was designed for use with CentOS.
+
+### License
+WTFPL &copy; 2012 Nick Barth
