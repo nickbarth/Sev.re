@@ -41,7 +41,7 @@ run_setup()
   servername=$1
   hostname $servername
   echo "Welcome to $servername" > /etc/motd
-  package_install 'screen' 'curl' 'wget'
+  package_install 'screen' 'curl' 'wget' 'git'
   yum update -y
 }
 
