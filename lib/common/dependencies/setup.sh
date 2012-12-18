@@ -1,6 +1,11 @@
+# Updates packages manager and names the server.
+#
+# $SERVER (optional) - Enviroment variable used to name the server.
 setup_install()
 {
-  hostname $servername
-  echo "Welcome to $servername" > /etc/motd
+  if [[ -z $SERVER ]]; then
+    hostname $SERVER
+    Echo "Welcome to $SERVER" > /etc/motd
+  fi
   yum update -y
 }
