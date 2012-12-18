@@ -42,6 +42,7 @@ sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ru
 ### Notes
 
 This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
+Common build tools such as Make and GCC as well as Git, and screen will be installed by default.
 
 ### License
 MIT &copy; 2012 Nick Barth
