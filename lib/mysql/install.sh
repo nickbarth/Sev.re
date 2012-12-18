@@ -1,6 +1,4 @@
-#!/bin/bash
-
-# MySql Installer
+# MySQL Installer
 mysql_install()
 {
   dependency_install 'mysql' 'packages'
