@@ -5,7 +5,10 @@ run_install()
 {
   if [[ -z $@ ]]; then
     # Install defaults
-    dependency_install 'common' 'setup' 'packages'
+    commont_install
+    ruby_install
+    nginx_install
+    mysql_install
   else
     # Install select applications
     for application in $@
