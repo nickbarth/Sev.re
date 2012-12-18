@@ -1,16 +1,15 @@
-# Runs the default installation or select application installations if specified.
+# Runs select application installations if specified.
 #
-# $@ (optional) - Array of applications installations to run.
+# $@ - Array of applications installations to run.
 run_install()
 {
   SYSTEM=$(cat /etc/redhat-release | awk '{print tolower($1)}')
   DIRECTORY=$PWD
   if [[ -z $@ ]]; then
-    # Install defaults
-    commont_install
-    ruby_install
-    nginx_install
-    mysql_install
+    # Applications are required to be specified
+    echo -e "\terror: applications packages not specified."
+    echo -e "\tusage: ./setup.sh [package]"
+    exit 1
   else
     # Install select applications
     for application in $@
