@@ -3,27 +3,45 @@
 Custom scripts create to help install applications and dependencies for
 development or production servers. 
 
-### Default Installation
+### Package Listings
 
-Currently, the the installer defaults to installing Ruby, Nginx, and MySQL.
+Here are the current packages that are avaliable to install and use.
+Any marked as *Latest* will grab the latest version via your package manager.
 
-```terminal
-curl -L https://raw.github.com/nickbarth/ServerHelper/install.sh | sh
-```
+- Ruby (1.9.3-p327)
+- NodeJS (v0.8.16)
+- MongoDB (2.2.2)
+- MySQL (Lastest)
+- Nginx (Lastest)
+- Postgresql (Lastest)
+- Redis (Lastest)
 
 ### Custom Installation
 
-Append the applications you would like installed to the end of the command using
-process substitution. For example, to install Nginx Ruby and MySQL use the
-following command.
+Here are some common server setups. To customize your server setup just
+append or remove the name of package as an argument.
+
+##### Ruby MySQL Nginx
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nginx ruby mysql
+sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby mysql nginx
+```
+
+##### NodeJS MongoDB Nginx
+
+```terminal
+sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
+```
+
+##### Ruby Redis PosgreSQL Nginx
+
+```terminal
+sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby redis posgresql nginx
 ```
 
 ### Notes
 
-This application was designed for use with CentOS, RHEL, and Fedora.
+This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
 
 ### License
 MIT &copy; 2012 Nick Barth
