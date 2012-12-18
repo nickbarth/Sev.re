@@ -12,6 +12,7 @@ run_install()
     exit 1
   else
     # Install select applications
+    common_install
     for application in $@
     do
       eval "${application}_install"
