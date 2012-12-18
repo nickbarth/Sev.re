@@ -21,7 +21,7 @@ sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ng
 
 ### Notes
 
-This application was designed for use with CentOS.
+This application was designed for use with CentOS, RHEL, and Fedora.
 
 ### License
 WTFPL &copy; 2012 Nick Barth
