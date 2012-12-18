@@ -3,6 +3,7 @@
 # $@ (optional) - Array of applications installations to run.
 run_install()
 {
+  SYSTEM=$(cat /etc/redhat-release | awk '{print tolower($1)}')
   if [[ -z $@ ]]; then
     # Install defaults
     commont_install
