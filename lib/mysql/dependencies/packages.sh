@@ -1,4 +1,4 @@
 packages_install()
 {
-  package_install 'mysql-server' 'mysql'
+  package_install 'mysql' 'mysql-server'
 }
