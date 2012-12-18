@@ -4,6 +4,7 @@
 run_install()
 {
   SYSTEM=$(cat /etc/redhat-release | awk '{print tolower($1)}')
+  DIRECTORY=$PWD
   if [[ -z $@ ]]; then
     # Install defaults
     commont_install
@@ -41,6 +42,7 @@ source_install()
   cd "/etc/$path"
   ./configure $config
   make; make install
+  cd $DIRECTORY
 }
 
 # Runs a includes scripts in package subdirectories and runs them.
