@@ -3,7 +3,7 @@
 # Ruby Installer
 ruby_install()
 {
-  ruby_version=$1
+  ruby_version=${1:'1.9.3-p327'}
   echo ">> Installing Ruby $ruby_version..."
   dependency_install 'ruby' 'yaml' 'packages'
   source_install "ruby-$ruby_version" \
