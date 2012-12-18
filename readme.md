@@ -1,4 +1,4 @@
-# Server Helpers
+# Server Helper
 
 Custom scripts create to help install applications and dependencies for development or production servers. 
 
