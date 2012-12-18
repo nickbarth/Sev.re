@@ -1,8 +1,9 @@
 #!/bin/bash
 
-source ./lib/common.sh
+# Include all libraries.
 source ./lib/ruby/install.sh
 source ./lib/nginx/install.sh
 source ./lib/mysql/install.sh
+source ./lib/common/init.sh
 
-run_install 'SERVERNAME'
+run_install $@
