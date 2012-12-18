@@ -5,7 +5,7 @@ setup_install()
 {
   if [[ -z $SERVER ]]; then
     hostname $SERVER
-    Echo "Welcome to $SERVER" > /etc/motd
+    echo "Welcome to $SERVER" > /etc/motd
   fi
   yum update -y
 }
