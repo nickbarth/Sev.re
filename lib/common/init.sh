@@ -41,9 +41,9 @@ package_install()
 exec_path()
 {
   name=$1; executable_path=$2
-  echo -e "\n# $name exec path"          >> ~/.bashrc
-  echo -e "PATH=\$PATH:$executable_path" >> ~/.bashrc
-  echo -e "export PATH"                  >> ~/.bashrc
+  echo -e "\n# $name exec path"          >> /etc/bashrc
+  echo -e "PATH=\$PATH:$executable_path" >> /etc/bashrc
+  echo -e "export PATH"                  >> /etc/bashrc
 }
 
 # Makes application from source.
