@@ -11,8 +11,11 @@ run_install()
     echo -e "\tusage: ./setup.sh [package]"
     exit 1
   else
-    # Install select applications
-    common_install
+    # Install common unless flag is set.
+    if [[ $@ != *-common* ]]; then
+      common_install
+    fi
+    # Install select applications.
     for application in $@
     do
       eval "${application}_install"
@@ -30,12 +33,14 @@ package_install()
 
 # Adds an executable path to the bashrc.
 #
-# $1 - A path containing executables.
+# $1 - Name of application.
+# $2 - A path containing executables.
 exec_path()
 {
-  $exec_path=$1
-  echo "PATH=$PATH:$exec_path" >> ~/.bashrc
-  echo "export" >> ~/.bashrc
+  name=$1; executable_path=$2
+  echo -e "\n# $name exec path"          >> ~/.bashrc
+  echo -e "PATH=\$PATH:$executable_path" >> ~/.bashrc
+  echo -e "export PATH"                  >> ~/.bashrc
 }
 
 # Makes application from source.
@@ -65,7 +70,7 @@ source_install()
   wget $url -O temp.tar.gz
   tar xzvf temp.tar.gz -C /etc/
   rm -f temp.tar.gz
-  exec_path "/etc/$name/bin"
+  exec_path $name "/etc/$name/bin"
 }
 
 # Runs a includes scripts in package subdirectories and runs them.
