@@ -28,6 +28,16 @@ package_install()
   eval "yum install -y $@"
 }
 
+# Adds an executable path to the bashrc.
+#
+# $1 - A path containing executables.
+exec_path()
+{
+  $exec_path=$1
+  echo "PATH=$PATH:$exec_path" >> ~/.bashrc
+  echo "export" >> ~/.bashrc
+}
+
 # Makes application from source.
 #
 # path - Directory to cd; make too.
@@ -35,14 +45,27 @@ package_install()
 # config (optional) - Configuration flags for configure.
 source_install()
 {
-  path=$1; url=$2; config=$3
+  name=$1; url=$2; config=$3
   wget $url -O temp.tar.gz
   tar xzvf temp.tar.gz -C /etc/
   rm -f temp.tar.gz
-  cd "/etc/$path"
+  cd "/etc/$name"
   ./configure $config
   make; make install
   cd $DIRECTORY
+}
+
+# Installs an application using its binaries.
+#
+# path - Directory to cd; make too.
+# url - URL of tarball package.
+source_install()
+{
+  name=$1; url=$2
+  wget $url -O temp.tar.gz
+  tar xzvf temp.tar.gz -C /etc/
+  rm -f temp.tar.gz
+  exec_path "/etc/$name/bin"
 }
 
 # Runs a includes scripts in package subdirectories and runs them.
