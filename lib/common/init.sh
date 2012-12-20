@@ -18,6 +18,9 @@ run_install()
     # Install select applications.
     for application in $@
     do
+      if [[ $application == "-common" ]]; then
+        continue
+      fi
       eval "${application}_install"
     done
   fi
@@ -67,9 +70,9 @@ source_install()
 source_install()
 {
   name=$1; url=$2
-  wget $url -O temp.tar.gz
-  tar xzvf temp.tar.gz -C /etc/
-  rm -f temp.tar.gz
+  # wget $url -O temp.tar.gz
+  # tar xzvf temp.tar.gz -C /etc/
+  # rm -f temp.tar.gz
   exec_path $name "/etc/$name/bin"
 }
 
