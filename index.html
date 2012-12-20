@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Serverhelper by nickbarth</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Serverhelper</h1>
+        <p>Bash Script for a Production Ruby Server Setup</p>
+
+        <p class="view"><a href="https://github.com/nickbarth/ServerHelper">View the Project on GitHub <small>nickbarth/ServerHelper</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nickbarth/ServerHelper/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nickbarth/ServerHelper/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nickbarth/ServerHelper">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Server Helper</h1>
+
+<p>Custom scripts create to help install applications and dependencies for
+development or production servers. </p>
+
+<h3>Package Listings</h3>
+
+<p>Here are the current packages that are avaliable to install and use.
+Any marked as <em>Latest</em> will grab the latest version via your package manager.</p>
+
+<ul>
+<li>Ruby (1.9.3-p327)</li>
+<li>NodeJS (v0.8.16)</li>
+<li>MongoDB (2.2.2)</li>
+<li>MySQL (Lastest)</li>
+<li>Nginx (Lastest)</li>
+<li>Postgresql (Lastest)</li>
+<li>Redis (Lastest)</li>
+</ul><h3>Custom Installation</h3>
+
+<p>Here are some common server setups. To customize your server setup just
+append or remove the name of package as an argument.</p>
+
+<h5>Ruby MySQL Nginx</h5>
+
+<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby mysql nginx
+</code></pre>
+
+<h5>NodeJS MongoDB Nginx</h5>
+
+<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
+</code></pre>
+
+<h5>JRuby Redis PostgreSQL Nginx</h5>
+
+<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) jruby redis posgresql nginx
+</code></pre>
+
+<h3>Notes</h3>
+
+<p>This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
+Common build tools such as Make and GCC as well as Git, and screen will be installed by default.</p>
+
+<h3>License</h3>
+
+<p>MIT © 2012 Nick Barth</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nickbarth">nickbarth</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
