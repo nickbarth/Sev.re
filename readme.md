@@ -33,10 +33,10 @@ sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ru
 sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
 ```
 
-##### Ruby Redis PosgreSQL Nginx
+##### JRuby Redis PostgreSQL Nginx
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby redis posgresql nginx
+sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) jruby redis posgresql nginx
 ```
 
 ### Notes
