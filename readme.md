@@ -1,7 +1,6 @@
 # Sev.re
 
-[Sev.re](http://info.sev.re/) is the simplest way to get your servers up and running
-with the applications you want.
+[Sev.re](http://info.sev.re/) is a dead simple way to setup your server.
 
 ### How does it work?
 
@@ -58,7 +57,9 @@ This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
 ### Final Notes
 
 Common build tools such as Make and GCC as well as Git, and screen will be installed by default.
-To circumvent this use the `-common` argument. Feedback, pushes, and forks are welcome. :octocat:
+To circumvent this use the `-common` argument. Feedback, Pushes, and Forks are welcome. :octocat:
 
 ### License
 MIT &copy; 2012 Nick Barth
+
+With dedication to a French [river](http://en.wikipedia.org/wiki/Sèvre_Nantaise). :fish:
