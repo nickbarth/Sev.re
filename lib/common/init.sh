@@ -40,16 +40,26 @@ check_compad()
   fi
 }
 
-# Adds an executable path to the bashrc.
+# Adds an executable path to the bashrc if its not already there.
 #
 # $1 - Name of application.
 # $2 - A path containing executables.
 exec_path()
 {
   name=$1; executable_path=$2
-  echo -e "\n# $name exec path"          >> /etc/bashrc
-  echo -e "PATH=\$PATH:$executable_path" >> /etc/bashrc
-  echo -e "export PATH"                  >> /etc/bashrc
+  if ! grep -Fq $executable_path /etc/bashrc; then
+    echo -e "\n# $name exec path"          >> /etc/bashrc
+    echo -e "PATH=\$PATH:$executable_path" >> /etc/bashrc
+    echo -e "export PATH"                  >> /etc/bashrc
+  fi
+}
+
+# Installs applications using YUM.
+#
+# $@ - An array of packages.
+package_install()
+{
+  eval "yum install -y $@"
 }
 
 # Makes application from source.
@@ -76,9 +86,9 @@ source_install()
 binary_install()
 {
   name=$1; url=$2
-  wget $url -O temp.tar.gz
-  tar xzvf temp.tar.gz -C /etc/
-  rm -f temp.tar.gz
+  # wget $url -O temp.tar.gz
+  # tar xzvf temp.tar.gz -C /etc/
+  # rm -f temp.tar.gz
   exec_path $name "/etc/$name/bin"
 }
 
