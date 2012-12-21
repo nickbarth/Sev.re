@@ -1,6 +1,6 @@
-# Ser.ve
+# Sev.re
 
-Ser.ve is the simplest way to get your servers up and running
+[Sev.re](http://info.sev.re/) is the simplest way to get your servers up and running
 with the applications you want.
 
 ### How does it work?
@@ -9,7 +9,7 @@ First, pick a few packages you'd like to install and pipe them to
 your shell. Like so:
 
 ```terminal
-sh <(curl -L ser.ve) ruby mongodb nginx
+sh <(curl -L sev.re) ruby mongodb nginx
 ```
 
 That's it. Your server will be ready to go.
@@ -36,19 +36,19 @@ append or remove the name of package as an argument.
 ##### Ruby MySQL Apache
 
 ```terminal
-sh <(curl -L ser.ve) ruby mysql apache
+sh <(curl -L sev.re) ruby mysql apache
 ```
 
 ##### NodeJS MongoDB Nginx
 
 ```terminal
-sh <(curl -L ser.ve) nodejs mongodb nginx
+sh <(curl -L sev.re) nodejs mongodb nginx
 ```
 
 ##### JRuby Redis PostgreSQL Nginx
 
 ```terminal
-sh <(curl -L ser.ve) jruby redis posgresql nginx
+sh <(curl -L sev.re) jruby redis posgresql nginx
 ```
 
 ### Requirements
