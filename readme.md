@@ -9,6 +9,7 @@ Here are the current packages that are avaliable to install and use.
 Any marked as *Latest* will grab the latest version via your package manager.
 
 - Ruby (1.9.3-p327)
+- JRuby (1.7.1)
 - NodeJS (v0.8.16)
 - MongoDB (2.2.2)
 - MySQL (Lastest)
