@@ -1,40 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Serverhelper : Bash Script for a Production Ruby Server Setup" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ser.ve by nickbarth</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Serverhelper</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ser.ve</h1>
+        <p>Bash Script for a Production Ruby Server Setup</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nickbarth/ServerHelper">View on GitHub</a>
+        <p class="view"><a href="https://github.com/nickbarth/Ser.ve">View the Project on GitHub <small>nickbarth/Ser.ve</small></a></p>
 
-          <h1 id="project_title">Serverhelper</h1>
-          <h2 id="project_tagline">Bash Script for a Production Ruby Server Setup</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/nickbarth/ServerHelper/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/nickbarth/ServerHelper/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        <ul>
+          <li><a href="https://github.com/nickbarth/Ser.ve/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nickbarth/Ser.ve/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nickbarth/Ser.ve">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Ser.ve</h1>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Server Helper</h1>
+<p>Ser.ve is the simplest way to get your servers up and running
+with the applications you want.</p>
 
-<p>Custom scripts create to help install applications and dependencies for
-development or production servers. </p>
+<h3>How does it work?</h3>
+
+<p>First, pick a few packages you'd like to install and pipe them to 
+your shell. Like so:</p>
+
+<pre lang="terminal"><code>sh &lt;(curl -L ser.ve) ruby mongodb nginx
+</code></pre>
+
+<p>That's it. Your server will be ready to go.</p>
 
 <h3>Package Listings</h3>
 
@@ -43,6 +50,7 @@ Any marked as <em>Latest</em> will grab the latest version via your package mana
 
 <ul>
 <li>Ruby (1.9.3-p327)</li>
+<li>JRuby (1.7.1)</li>
 <li>NodeJS (v0.8.16)</li>
 <li>MongoDB (2.2.2)</li>
 <li>MySQL (Lastest)</li>
@@ -54,41 +62,40 @@ Any marked as <em>Latest</em> will grab the latest version via your package mana
 <p>Here are some common server setups. To customize your server setup just
 append or remove the name of package as an argument.</p>
 
-<h5>Ruby MySQL Nginx</h5>
+<h5>Ruby MySQL Apache</h5>
 
-<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby mysql nginx
+<pre lang="terminal"><code>sh &lt;(curl -L ser.ve) ruby mysql apache
 </code></pre>
 
 <h5>NodeJS MongoDB Nginx</h5>
 
-<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
+<pre lang="terminal"><code>sh &lt;(curl -L ser.ve) nodejs mongodb nginx
 </code></pre>
 
 <h5>JRuby Redis PostgreSQL Nginx</h5>
 
-<pre lang="terminal"><code>sh &lt;(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) jruby redis posgresql nginx
+<pre lang="terminal"><code>sh &lt;(curl -L ser.ve) jruby redis posgresql nginx
 </code></pre>
 
-<h3>Notes</h3>
+<h3>Requirements</h3>
 
-<p>This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
-Common build tools such as Make and GCC as well as Git, and screen will be installed by default.</p>
+<p>This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.</p>
+
+<h3>Final Notes</h3>
+
+<p>Common build tools such as Make and GCC as well as Git, and screen will be installed by default.
+To circumvent this use the <code>-common</code> argument. Feedback, pushes, and forks are welcome. <img class="emoji" title=":octocat:" alt=":octocat:" src="https://a248.e.akamai.net/assets.github.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"></p>
 
 <h3>License</h3>
 
 <p>MIT © 2012 Nick Barth</p>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Serverhelper maintained by <a href="https://github.com/nickbarth">nickbarth</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nickbarth">nickbarth</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
