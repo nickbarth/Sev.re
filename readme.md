@@ -1,7 +1,18 @@
-# Server Helper
+# Ser.ve
 
-Custom scripts create to help install applications and dependencies for
-development or production servers. 
+Ser.ve is the simplest way to get your servers up and running
+with the applications you want.
+
+### How does it work?
+
+First, pick a few packages you'd like to install and pipe them to 
+your shell. Like so:
+
+```terminal
+sh <(curl -L ser.ve) ruby mongodb nginx
+```
+
+That's it. Your server will be ready to go.
 
 ### Package Listings
 
@@ -22,28 +33,32 @@ Any marked as *Latest* will grab the latest version via your package manager.
 Here are some common server setups. To customize your server setup just
 append or remove the name of package as an argument.
 
-##### Ruby MySQL Nginx
+##### Ruby MySQL Apache
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby mysql nginx
+sh <(curl -L ser.ve) ruby mysql apache
 ```
 
 ##### NodeJS MongoDB Nginx
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
+sh <(curl -L ser.ve) nodejs mongodb nginx
 ```
 
 ##### JRuby Redis PostgreSQL Nginx
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) jruby redis posgresql nginx
+sh <(curl -L ser.ve) jruby redis posgresql nginx
 ```
 
-### Notes
+### Requirements
 
 This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
+
+### Final Notes
+
 Common build tools such as Make and GCC as well as Git, and screen will be installed by default.
+To circumvent this use the `-common` argument. Feedback, pushes, and forks are welcome. :octocat:
 
 ### License
 MIT &copy; 2012 Nick Barth
