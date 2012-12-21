@@ -9,6 +9,7 @@ Here are the current packages that are avaliable to install and use.
 Any marked as *Latest* will grab the latest version via your package manager.
 
 - Ruby (1.9.3-p327)
+- JRuby (1.7.1)
 - NodeJS (v0.8.16)
 - MongoDB (2.2.2)
 - MySQL (Lastest)
@@ -33,10 +34,10 @@ sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ru
 sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) nodejs mongodb nginx
 ```
 
-##### Ruby Redis PosgreSQL Nginx
+##### JRuby Redis PostgreSQL Nginx
 
 ```terminal
-sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) ruby redis posgresql nginx
+sh <(curl -L https://raw.github.com/nickbarth/ServerHelper/master/install.sh) jruby redis posgresql nginx
 ```
 
 ### Notes
