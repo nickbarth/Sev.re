@@ -3,7 +3,8 @@
 # $@ - Array of applications installations to run.
 run_install()
 {
-  SYSTEM=$(cat /etc/redhat-release | awk '{print tolower($1)}')
+  OS=`cat /etc/redhat-release | awk '{print tolower($1)}'`
+  KERNEL=`uname -m`
   DIRECTORY=$PWD
   if [[ -z $@ ]]; then
     # Applications are required to be specified
@@ -11,6 +12,10 @@ run_install()
     echo -e "\tusage: ./setup.sh [package]"
     exit 1
   else
+    # Run compatibility check.
+    if [[ $@ != *-compad* ]]; then
+      check_compad
+    fi
     # Install common unless flag is set.
     if [[ $@ != *-common* ]]; then
       common_install
@@ -18,7 +23,7 @@ run_install()
     # Install select applications.
     for application in $@
     do
-      if [[ $application == "-common" ]]; then
+      if [[ $application == -* ]]; then
         continue
       fi
       eval "${application}_install"
@@ -26,12 +31,13 @@ run_install()
   fi
 }
 
-# Installs applications using the default package manager.
-#
-# $@ - An array of packages.
-package_install()
+# Runs a check to see if your system is compatible with these scripts.
+check_compad()
 {
-  eval "yum install -y $@"
+  if [[ "fedora redhat centos" != *$OS* || $KERNEL != "x86_64" ]]; then
+    echo -e "\terror: your system is not supported."
+    exit 1
+  fi
 }
 
 # Adds an executable path to the bashrc.
