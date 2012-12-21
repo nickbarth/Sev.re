@@ -1,12 +1,12 @@
 #!/bin/bash
 
 #######################################################
-# Ser.ve - Server Setups Made Simple
-# To learn more about Ser.ve visit http://info.ser.ve/
+# Sev.re - Server Setups Made Simple
+# To learn more about Sev.re visit http://info.sev.re/
 #######################################################
 
 # Download and run setup.
 cd /tmp/
-curl -L https://github.com/nickbarth/Ser.ve/tarball/master | tar zx
+curl -L https://github.com/nickbarth/Sev.re/tarball/master | tar zx
 cd `ls /tmp/* -t1d | head -1`
 source ./setup.sh $@
