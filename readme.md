@@ -57,7 +57,8 @@ This application was designed for use with 64-Bit CentOS, RHEL, and Fedora.
 ### Final Notes
 
 Common build tools such as Make and GCC as well as Git, and screen will be installed by default.
-To circumvent this use the `-common` argument. Feedback, Pushes, and Forks are welcome. :octocat:
+To circumvent this use the `-common` argument or to circumvent the compadibility check use 
+`-compad`. Feedback, Pushes, and Forks are welcome. :octocat:
 
 ### License
 MIT &copy; 2012 Nick Barth
