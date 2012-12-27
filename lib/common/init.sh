@@ -86,9 +86,9 @@ source_install()
 binary_install()
 {
   name=$1; url=$2
-  # wget $url -O temp.tar.gz
-  # tar xzvf temp.tar.gz -C /etc/
-  # rm -f temp.tar.gz
+  wget $url -O temp.tar.gz
+  tar xzvf temp.tar.gz -C /etc/
+  rm -f temp.tar.gz
   exec_path $name "/etc/$name/bin"
 }
 
