@@ -1,6 +1,6 @@
-# Sev.re
+# [Sev.re](http://info.sev.re/) 
 
-[Sev.re](http://info.sev.re/) - server setups in one line.
+*Server setups in one line.*
 
 ### How does it work?
 
