@@ -1,6 +1,6 @@
 # Sev.re
 
-[Sev.re](http://duex.sev.re) is a command tool to do server setups in one line.
+[Sev.re](http://deux.sev.re) is a command tool to do server setups in one line.
 
 ### How does it work?
 
