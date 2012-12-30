@@ -1,4 +1,4 @@
-# [Deux Sev.re](http://deux.sev.re/)
+# Sev.re
 
 Sev.re is a command line tool to do server setups in one line.
 
