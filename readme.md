@@ -1,17 +1,17 @@
 # Sev.re
 
-[Sev.re](http://info.sev.re/) is a dead simple way to setup your server.
+[Sev.re](http://info.sev.re/) - server setups in one line.
 
 ### How does it work?
 
-First, pick a few packages you'd like to install and pipe them to 
-your shell. Like so:
+First, pick a few packages you would like to install and pipe them to your
+shell. Like so:
 
 ```terminal
 sh <(curl -L sev.re) ruby mongodb nginx
 ```
 
-That's it. Your server will be ready to go.
+All clear. Your server will be ready to go.
 
 ### Package Listings
 
