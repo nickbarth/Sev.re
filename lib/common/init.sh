@@ -28,6 +28,10 @@ run_install()
       fi
       eval "${application}_install"
     done
+    # Remove install directory unless flag is set.
+    if [[ $@ != *-cleanup* ]]; then
+      run_cleanup
+    fi
   fi
 }
 
@@ -38,6 +42,12 @@ check_compad()
     echo -e "\terror: your system is not supported."
     exit 1
   fi
+}
+
+# Remove the install directory.
+run_cleanup()
+{
+  rm -rf `ls /tmp/* -t1d | grep Sev.re`
 }
 
 # Adds an executable path to the bashrc if its not already there.
