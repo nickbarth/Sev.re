@@ -1,6 +1,6 @@
-# [Sev.re](http://info.sev.re/)
+# [Deux Sev.re](http://deux.sev.re/)
 
-*Server setups in one line.*
+Sev.re is a command line tool to do server setups in one line.
 
 ### How does it work?
 
