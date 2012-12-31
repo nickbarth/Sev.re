@@ -6,6 +6,6 @@
 #######################################################
 
 # Download and run setup.
-curl -L https://github.com/nickbarth/Sev.re/tarball/master | tar zx
+cd /tmp/; curl -L https://github.com/nickbarth/Sev.re/tarball/master | tar zx
 cd `ls /tmp/* -t1d | grep Sev.re | head -1`
 source ./setup.sh $@
