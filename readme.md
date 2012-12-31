@@ -1,6 +1,6 @@
 # Sev.re
 
-Sev.re is a command line tool to do server setups in one line.
+[Sev.re](http://deux.sev.re) is a command tool to do server setups in one line.
 
 ### How does it work?
 
@@ -63,4 +63,4 @@ To circumvent this use the `-common` argument or to circumvent the compadibility
 ### License
 MIT &copy; 2012 Nick Barth
 
-With dedication to a French [river](http://en.wikipedia.org/wiki/Sèvre_Nantaise). :fish:
+With dedication to the French [rivers](http://en.wikipedia.org/wiki/Deux-Sèvres). :fish:
